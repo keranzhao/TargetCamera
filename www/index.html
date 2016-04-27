@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <title>Hello World</title>
+		<style>
+			body, html{
+				height:100%;
+			}
+			body{
+				color:#333;
+				text-align: center;
+				font-family: sans-serif;
+				background-color: transparent;
+				background-image: url('img/background.png');
+				background-size: cover;
+			}
+			.block{
+				padding:.25rem 0;
+				margin:.25rem 0;
+				border:1px solid #111;
+				border-radius: 3px;
+			}
+			.bottomNav {
+				background-color:#096;
+				z-index:999;
+				position:fixed;
+				bottom:0;
+				left:0;
+				width:100%;
+				_position:absolute; 
+				_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight);
+				overflow:visible;
+			}
+			button{
+				background: white:
+				color:#333;
+				height:30px;
+				border-radius: 3px;
+				border:1px solid #ccc;
+				margin:.25rem;
+			}
+			.pictures{
+				
+			}
+			.controls{
+				margin-top:100%;
+			}
+		</style>
+    </head>
+    <body style="">
+
+		<div class="controls">
+			<div class="block">
+				<button id="startCameraButton">Start Camera</button>
+				<button id="stopCameraButton">Stop Camera</button>
+				<button id="switchCameraButton">Switch Camera</button>
+			</div>
+			<div class="block">
+				<button id="takePictureButton">Take Picture</button>
+			</div>
+        </div>
+
+		<div class="pictures">
+			<div>Compressed:</div>
+			<p><img id="previewPicture" width="200"/></p>
+			<div>Original:</div>
+			<p><img id="originalPicture" width="200"/></p>
+		</div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="CameraPreview.js"></script>
+    </body>
+</html>
