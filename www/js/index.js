@@ -16,7 +16,7 @@ var app = {
 		var tapEnabled = true;
 		var dragEnabled = true;
         var toBack = true;
-		cordova.plugins.camerapreview.startCamera({x: 0, y: 0, width: 400, height:400}, "front", tapEnabled, dragEnabled, toBack);
+		cordova.plugins.camerapreview.startCamera({x: 0, y: 0, width: 400, height:600}, "front", tapEnabled, dragEnabled, toBack);
 	},
 	onStopCamera: function() {
 		cordova.plugins.camerapreview.stopCamera();
